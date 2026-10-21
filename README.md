@@ -51,3 +51,33 @@ Run from this repository folder so the script can find `internB_delivery_delays.
 - [ ] Review invalid/outlier values and parse dates
 - [ ] Document key findings from plots
 - [ ] Confirm a leakage-safe feature set before model training
+
+---
+
+## Roadmap description
+
+### Theory
+- Data quality: missing-value mechanisms (MCAR, MAR, MNAR) and imputation strategies.
+- Outliers: IQR and z-score; when **not** to remove outliers.
+- Encoding: label encoding vs one-hot vs target encoding; high-cardinality problems.
+- Scaling: standardization vs normalization, and which models need scaling.
+- Data leakage — a major intern mistake: scaling before splitting, target leakage, and time leakage.
+- Train/validation/test split and stratification.
+- Reusable preprocessing with scikit-learn `Pipeline` and `ColumnTransformer`.
+
+### Hands-on lab
+- Dataset: Telco Customer Churn or Ames Housing.
+- Perform full EDA: univariate and bivariate analysis, correlation heatmap, target relationship, and **at least six visualizations with written insights**.
+- Build a reusable preprocessing pipeline for numeric and categorical columns.
+- Demonstrate leakage intentionally: scale before splitting, then scale after splitting; compare scores and explain the difference.
+
+### Expected deliverable
+- `day03_eda_preprocessing.ipynb` (or organized Python equivalents) plus an EDA summary in Markdown.
+
+### Practical completion checklist
+- [ ] Identify missing values and outliers.
+- [ ] Compare encoding and scaling choices.
+- [ ] Separate train, validation, and test data appropriately.
+- [ ] Build a preprocessing pipeline for numeric and categorical columns.
+- [ ] Create six or more visualizations and explain the findings.
+- [ ] Demonstrate and explain preprocessing leakage.
