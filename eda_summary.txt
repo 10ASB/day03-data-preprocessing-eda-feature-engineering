@@ -1,0 +1,37 @@
+DELIVERY DELAY DATASET SUMMARY
+===================================
+
+Initial shape: (1800, 17)
+Final shape: (1800, 17)
+Duplicate rows removed: 0
+
+Missing values before cleaning:
+order_id                    0
+order_datetime              0
+customer_city               0
+delivery_pincode            0
+product_category            0
+product_weight_kg         295
+order_value                 0
+discount_pct                0
+distance_km                 0
+courier_partner             0
+promised_delivery_days      0
+warehouse_zone              0
+payment_mode                0
+actual_delivery_days        0
+customer_rating           613
+delay_complaint_raised      0
+is_delayed                  0
+
+Dataset columns: 17
+Rows: 1800
+Target column: is_delayed
+
+Learning notes:
+- Check missing values and duplicates before cleaning.
+- Clean order_value strings before converting to numeric.
+- Standardize categorical text consistently.
+- Fit preprocessing only on the training split.
+- Review potential target leakage before model training: actual_delivery_days, customer_rating, and delay_complaint_raised may be unavailable at prediction time.
+- Review outliers and parse order_datetime before feature engineering.
